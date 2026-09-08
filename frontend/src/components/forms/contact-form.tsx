@@ -48,10 +48,15 @@ export function ContactForm() {
     setStatus('loading')
     setError('')
 
-    const accessKey = import.meta.env.ACCESS_KEY
+    // En Vite, todas las variables de entorno para el frontend DEBEN comenzar con VITE_
+    const accessKey =
+      import.meta.env.VITE_ACCESS_KEY ||
+      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
+      import.meta.env.VITE_WEB3FORMS_KEY
 
     try {
       if (!accessKey) {
+        console.warn('Web3Forms access key is missing. Make sure VITE_ACCESS_KEY is set.')
         await new Promise((resolve) => setTimeout(resolve, 800))
         setStatus('success')
         return
