@@ -48,7 +48,7 @@ export function ContactForm() {
     setStatus('loading')
     setError('')
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    const accessKey = import.meta.env.ACCESS_KEY
 
     try {
       if (!accessKey) {
