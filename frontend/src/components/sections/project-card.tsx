@@ -46,7 +46,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <div>
               <div className="mb-4 sm:mb-6 flex items-start justify-between gap-4">
                 <div>
-                  <p className="type-label mb-1.5 text-brand-purple">Proyecto NoRest</p>
+                  <p className="type-label mb-1.5 text-brand-purple">Proyecto Destacado</p>
                   <h3 className="font-display text-2xl sm:text-3xl font-black uppercase leading-tight tracking-[-0.04em]">
                     {project.title}
                   </h3>
