@@ -18,17 +18,17 @@ export function ProjectsSection() {
   }
 
   return (
-    <section id="proyectos" className="overflow-hidden bg-brand-mist px-6 py-24 sm:px-8 sm:py-32 lg:px-20">
+    <section id="proyectos" className="overflow-hidden bg-brand-mist px-5 py-16 sm:px-8 sm:py-28 lg:px-20">
       <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-16 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+        <div className="mb-12 sm:mb-16 flex flex-col justify-between gap-6 sm:gap-8 lg:flex-row lg:items-end">
           <div>
-            <p className="type-label mb-5 border-l-[6px] border-brand-lime pl-4 text-brand-ink">{p.sectionLabel}</p>
-            <TypographyH2 className="text-[clamp(3.6rem,8vw,7.4rem)] uppercase">
+            <p className="type-label mb-4 border-l-[6px] border-brand-lime pl-4 text-brand-ink">{p.sectionLabel}</p>
+            <TypographyH2 className="text-[clamp(2.2rem,7vw,7rem)] break-words uppercase">
               {p.title1}
               <br />
               <span className="text-brand-ink/35">{p.title2}</span>
             </TypographyH2>
-            <TypographyP className="mt-8 max-w-xl text-lg font-semibold text-brand-ink/70 sm:text-xl">
+            <TypographyP className="mt-6 sm:mt-8 max-w-xl text-base sm:text-xl font-semibold text-brand-ink/70">
               {p.subtitle}
             </TypographyP>
           </div>

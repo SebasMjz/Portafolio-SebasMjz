@@ -4,7 +4,7 @@ import { translations, type Language } from './translations'
 interface LanguageContextValue {
   language: Language
   setLanguage: (lang: Language) => void
-  t: typeof translations['es']
+  t: (typeof translations)[Language]
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null)

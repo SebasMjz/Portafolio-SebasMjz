@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, ArrowUpRight, Languages } from 'lucide-react'
+import { Menu, ArrowUpRight, Languages, Github, Linkedin } from 'lucide-react'
 
 import { LogoMark } from '@/components/brand/logo-mark'
 import { Button } from '@/components/ui/button'
@@ -35,7 +35,7 @@ export function SiteHeader({ onContactClick }: SiteHeaderProps) {
     <header className="sticky top-0 z-50 border-b-[3px] border-brand-ink bg-brand-paper/95 backdrop-blur-sm" style={{ transform: 'translateZ(0)', willChange: 'transform' }}>
       <nav className="mx-auto flex min-h-[76px] w-full max-w-[1600px] items-center justify-between gap-5 px-5 sm:px-8 lg:px-10" aria-label={nav.ariaNav}>
         <a href="#inicio" className="focus-ring shrink-0" aria-label={nav.ariaHome}>
-          <LogoMark imageClassName="h-8 sm:h-9" />
+          <LogoMark />
         </a>
         <div className="hidden items-center gap-8 lg:flex">
           {nav.links.map((link) => (
@@ -49,6 +49,27 @@ export function SiteHeader({ onContactClick }: SiteHeaderProps) {
           ))}
         </div>
         <div className="flex items-center gap-3">
+          <a
+            href="https://github.com/SebasMjz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring hidden items-center gap-1.5 border-[3px] border-brand-ink bg-transparent px-3 py-2 font-display text-xs font-black uppercase tracking-[0.1em] text-brand-ink transition-colors hover:bg-brand-ink hover:text-white sm:inline-flex"
+            aria-label="GitHub Profile"
+          >
+            <Github className="size-3.5" aria-hidden="true" />
+            <span className="hidden lg:inline">GitHub</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sebasmjz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring hidden items-center gap-1.5 border-[3px] border-brand-ink bg-transparent px-3 py-2 font-display text-xs font-black uppercase tracking-[0.1em] text-brand-ink transition-colors hover:bg-brand-ink hover:text-white sm:inline-flex"
+            aria-label="LinkedIn Profile"
+          >
+            <Linkedin className="size-3.5" aria-hidden="true" />
+            <span className="hidden lg:inline">LinkedIn</span>
+          </a>
+
           {/* Language toggle - desktop */}
           <button
             onClick={toggleLanguage}
@@ -111,6 +132,27 @@ export function SiteHeader({ onContactClick }: SiteHeaderProps) {
                     </a>
                   </SheetClose>
                 ))}
+                {/* Social links inside mobile menu */}
+                <div className="mt-4 flex gap-4">
+                  <a
+                    href="https://github.com/SebasMjz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 border border-white/20 px-4 py-3 font-display text-base font-black uppercase tracking-[0.1em] text-white hover:bg-white/10"
+                  >
+                    <Github className="size-4" aria-hidden="true" />
+                    GitHub
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/sebasmjz/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 border border-white/20 px-4 py-3 font-display text-base font-black uppercase tracking-[0.1em] text-white hover:bg-white/10"
+                  >
+                    <Linkedin className="size-4" aria-hidden="true" />
+                    LinkedIn
+                  </a>
+                </div>
                 {/* Language toggle inside mobile menu */}
                 <button
                   onClick={() => { toggleLanguage(); setOpen(false) }}

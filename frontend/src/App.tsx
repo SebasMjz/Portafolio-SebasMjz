@@ -5,11 +5,11 @@ import { MotionConfig } from 'motion/react'
 import { SiteFooter } from '@/components/layout/site-footer'
 import { SiteHeader } from '@/components/layout/site-header'
 import { ContactSection } from '@/components/sections/contact-section'
-import { FaqSection } from '@/components/sections/faq-section'
 import { HeroSection } from '@/components/sections/hero-section'
-import { ProcessSection } from '@/components/sections/process-section'
+import { SkillsSection } from '@/components/sections/skills-section'
+import { ExperienceSection } from '@/components/sections/experience-section'
+import { NoRestSection } from '@/components/sections/norest-section'
 import { ProjectsSection } from '@/components/sections/projects-section'
-import { ServicesSection } from '@/components/sections/services-section'
 import { TooltipProvider } from '@/components/ui/tooltip'
 
 function App() {
@@ -29,10 +29,10 @@ function App() {
         <SiteHeader onContactClick={focusContact} />
         <main id="contenido">
           <HeroSection />
-          <ServicesSection />
-          <ProcessSection />
+          <SkillsSection />
+          <ExperienceSection />
+          <NoRestSection />
           <ProjectsSection />
-          <FaqSection />
           <ContactSection />
         </main>
         <SiteFooter />

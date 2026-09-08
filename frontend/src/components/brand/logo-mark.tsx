@@ -5,18 +5,23 @@ interface LogoMarkProps {
   imageClassName?: string
 }
 
-export function LogoMark({ className, imageClassName }: LogoMarkProps) {
+export function LogoMark({ className }: LogoMarkProps) {
   return (
-    <span className={cn('inline-flex items-center justify-center border-[3px] border-brand-ink bg-white px-3 py-1.5 brutalist-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5', className)}>
-      <img
-        src="/assets/norest-logo.png"
-        alt="NoRest Solutions"
-        width={180}
-        height={68}
-        className={cn('h-8 sm:h-9 w-auto object-contain', imageClassName)}
-      />
+    <span
+      className={cn(
+        'group inline-flex items-center gap-2 border-[3px] border-brand-ink bg-white px-3 py-1.5 font-display text-brand-ink brutalist-shadow transition-transform duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 select-none',
+        className
+      )}
+    >
+      <span className="flex size-7 items-center justify-center border-2 border-brand-ink bg-brand-purple font-display text-xs font-black text-brand-gold">
+        SM
+      </span>
+      <span className="font-display text-sm font-black uppercase tracking-wider text-brand-ink">
+        SEBASTIAN<span className="text-brand-purple">.DEV</span>
+      </span>
     </span>
   )
 }
+
 
 

@@ -1,8 +1,8 @@
+
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { Check, Loader2, Send } from 'lucide-react'
-
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Field, FieldDescription, FieldError, FieldGroup, FieldLabel } from '@/components/ui/field'
@@ -69,8 +69,8 @@ export function ContactForm() {
           email: values.email.trim(),
           service: values.service,
           message: values.message.trim(),
-          subject: `Nuevo mensaje de ${values.name.trim()} - NoRest Solutions`,
-          from_name: 'NoRest Web Form',
+          subject: `Nuevo mensaje de ${values.name.trim()} - Sebastian Mendieta`,
+          from_name: 'Sebastian Mendieta Contact Form',
         }),
       })
 
@@ -90,10 +90,10 @@ export function ContactForm() {
   }
 
   return (
-    <div className="relative min-h-[560px]">
-      <form onSubmit={handleSubmit} className="space-y-7" noValidate>
+    <div className="relative min-h-[460px] sm:min-h-[560px]">
+      <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-7" noValidate>
         <FieldGroup>
-          <div className="grid gap-7 sm:grid-cols-2">
+          <div className="grid gap-5 sm:gap-7 sm:grid-cols-2">
             <Field>
               <FieldLabel htmlFor="contact-name" className="type-label text-brand-ink">{c.formName}</FieldLabel>
               <Input
@@ -103,7 +103,7 @@ export function ContactForm() {
                 placeholder={c.formNamePlaceholder}
                 required
                 disabled={status === 'loading'}
-                className="h-14 rounded-none border-[3px] border-brand-ink bg-white px-4 text-lg focus-visible:border-brand-purple focus-visible:ring-0"
+                className="h-12 sm:h-14 rounded-none border-[3px] border-brand-ink bg-white px-3 sm:px-4 text-base sm:text-lg focus-visible:border-brand-purple focus-visible:ring-0"
               />
             </Field>
             <Field>
@@ -116,14 +116,14 @@ export function ContactForm() {
                 placeholder={c.formEmailPlaceholder}
                 required
                 disabled={status === 'loading'}
-                className="h-14 rounded-none border-[3px] border-brand-ink bg-white px-4 text-lg focus-visible:border-brand-purple focus-visible:ring-0"
+                className="h-12 sm:h-14 rounded-none border-[3px] border-brand-ink bg-white px-3 sm:px-4 text-base sm:text-lg focus-visible:border-brand-purple focus-visible:ring-0"
               />
             </Field>
           </div>
           <Field>
             <FieldLabel htmlFor="contact-service" className="type-label text-brand-ink">{c.formService}</FieldLabel>
             <Select value={values.service} onValueChange={(value) => setValue('service', value)} disabled={status === 'loading'}>
-              <SelectTrigger id="contact-service" className="h-14 w-full rounded-none border-[3px] border-brand-ink bg-white px-4 text-lg focus:ring-0">
+              <SelectTrigger id="contact-service" className="h-12 sm:h-14 w-full rounded-none border-[3px] border-brand-ink bg-white px-3 sm:px-4 text-base sm:text-lg focus:ring-0">
                 <SelectValue placeholder={c.formServicePlaceholder} />
               </SelectTrigger>
               <SelectContent className="rounded-none border-[3px] border-brand-ink bg-white">
@@ -142,8 +142,8 @@ export function ContactForm() {
               placeholder={c.formMessagePlaceholder}
               required
               disabled={status === 'loading'}
-              rows={5}
-              className="resize-none rounded-none border-[3px] border-brand-ink bg-white px-4 py-3 text-lg focus-visible:border-brand-purple focus-visible:ring-0"
+              rows={4}
+              className="resize-none rounded-none border-[3px] border-brand-ink bg-white px-3 sm:px-4 py-3 text-base sm:text-lg focus-visible:border-brand-purple focus-visible:ring-0"
             />
             <FieldDescription className="text-brand-ink/55">{c.formMessageDesc}</FieldDescription>
           </Field>
@@ -153,17 +153,17 @@ export function ContactForm() {
           type="submit"
           size="lg"
           disabled={status === 'loading'}
-          className="focus-ring h-16 w-full rounded-none border-[3px] border-brand-ink bg-brand-lime px-6 font-display text-xl font-black uppercase text-brand-ink brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:bg-brand-lime hover:shadow-none sm:text-2xl"
+          className="focus-ring h-14 sm:h-16 w-full rounded-none border-[3px] border-brand-ink bg-brand-lime px-6 font-display text-lg sm:text-2xl font-black uppercase text-brand-ink brutalist-shadow hover:translate-x-1 hover:translate-y-1 hover:bg-brand-lime hover:shadow-none"
         >
           {status === 'loading' ? (
             <>
               {c.formSending}
-              <Loader2 className="size-6 animate-spin" aria-hidden="true" />
+              <Loader2 className="size-5 sm:size-6 animate-spin" aria-hidden="true" />
             </>
           ) : (
             <>
               {c.formSend}
-              <Send className="size-6" aria-hidden="true" />
+              <Send className="size-5 sm:size-6" aria-hidden="true" />
             </>
           )}
         </Button>
@@ -192,7 +192,7 @@ export function ContactForm() {
       </AnimatePresence>
       <Alert className="sr-only" role="status">
         <AlertTitle>Contact form</AlertTitle>
-        <AlertDescription>Direct submission via Web3Forms to NoRestSolutions@outlook.com</AlertDescription>
+        <AlertDescription>Direct submission via Web3Forms to sebastiantx0604@gmail.com</AlertDescription>
       </Alert>
     </div>
   )

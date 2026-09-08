@@ -10,29 +10,29 @@ export function ContactSection() {
 
   return (
     <section id="contacto" className="grid border-y-[3px] border-brand-ink md:grid-cols-2">
-      <div className="flex min-h-[560px] flex-col justify-center bg-brand-purple px-6 py-20 text-white sm:px-12 lg:px-20">
-        <TypographyH2 className="max-w-xl text-[clamp(3.7rem,7vw,7.3rem)] uppercase">
+      <div className="flex min-h-[460px] sm:min-h-[560px] flex-col justify-center bg-brand-purple px-5 py-14 text-white sm:px-12 sm:py-20 lg:px-20">
+        <TypographyH2 className="max-w-xl text-[clamp(2.2rem,7vw,6.5rem)] break-words uppercase">
           {c.title1}<span className="text-brand-lime">{c.titleHighlight}</span>
         </TypographyH2>
-        <TypographyP className="mt-9 max-w-lg text-xl leading-snug text-purple-100 sm:text-2xl">
+        <TypographyP className="mt-6 sm:mt-9 max-w-lg text-lg sm:text-2xl leading-snug text-purple-100">
           {c.subtitle}
         </TypographyP>
-        <div className="mt-12 space-y-5">
-          <a href="mailto:NoRestSolutions@outlook.com" className="focus-ring flex w-fit items-center gap-4 text-lg font-bold hover:text-brand-lime sm:text-xl">
-            <span className="flex size-12 items-center justify-center rounded-full border-[3px] border-brand-ink bg-brand-lime text-brand-ink">
-              <Mail className="size-5" aria-hidden="true" />
+        <div className="mt-8 sm:mt-12 space-y-4 sm:space-y-5">
+          <a href="mailto:sebastiantx0604@gmail.com" className="focus-ring flex items-center gap-3 sm:gap-4 text-sm sm:text-lg lg:text-xl font-bold hover:text-brand-lime transition-colors">
+            <span className="flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-full border-[3px] border-brand-ink bg-brand-lime text-brand-ink">
+              <Mail className="size-4 sm:size-5" aria-hidden="true" />
             </span>
-            NoRestSolutions@outlook.com
+            <span className="break-all sm:break-normal">sebastiantx0604@gmail.com</span>
           </a>
-          <a href="https://wa.me/59172928969" target="_blank" rel="noopener noreferrer" className="focus-ring flex w-fit items-center gap-4 text-lg font-bold hover:text-brand-gold sm:text-xl">
-            <span className="flex size-12 items-center justify-center rounded-full border-[3px] border-brand-ink bg-brand-gold text-brand-ink">
-              <Phone className="size-5" aria-hidden="true" />
+          <a href="https://wa.me/59176474075" target="_blank" rel="noopener noreferrer" className="focus-ring flex items-center gap-3 sm:gap-4 text-sm sm:text-lg lg:text-xl font-bold hover:text-brand-gold transition-colors">
+            <span className="flex size-10 sm:size-12 shrink-0 items-center justify-center rounded-full border-[3px] border-brand-ink bg-brand-gold text-brand-ink">
+              <Phone className="size-4 sm:size-5" aria-hidden="true" />
             </span>
-            +591 72928969
+            <span>+591 76474075</span>
           </a>
         </div>
       </div>
-      <div className="bg-brand-paper px-6 py-20 sm:px-12 lg:px-20">
+      <div className="bg-brand-paper px-5 py-12 sm:px-12 sm:py-20 lg:px-20">
         <ContactForm />
       </div>
     </section>
